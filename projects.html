@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Projects - Devansha Kaur</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+            body {
+                font-family: 'Open Sans', sans-serif;
+                color: white;
+                background-color: #1a1a1a; /* Black background */
+            }
+
+            h1, h2, h3 {
+                font-family: 'Playfair Display', serif;
+                color: #e31b23; /* Consistent color scheme */
+            }
+
+            .container {
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 60px 20px;
+                text-align: center;
+            }
+
+            /* Projects Section */
+            #projects {
+                margin: 50px 0;
+            }
+
+            .project-card {
+                background: linear-gradient(135deg, #222, #333); /* Dark gray gradient background */
+                padding: 30px;
+                border-radius: 12px;
+                margin: 20px;
+                text-align: left;
+                color: white;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+                transition: transform 0.3s, box-shadow 0.3s;
+                position: relative;
+            }
+
+            .project-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            }
+
+            .project-card h3 {
+                font-size: 2em;
+                margin-bottom: 10px;
+                color: #e31b23; /* Consistent red for project titles */
+            }
+
+            .project-card p {
+                line-height: 1.8em;
+                color: #d0d0d0; /* Light gray for better readability */
+            }
+
+            .project-card ul {
+                list-style-type: none;
+                padding-left: 0;
+            }
+
+            .project-card ul li {
+                margin: 10px 0;
+                color: #c0c0c0; /* Silver */
+            }
+
+            .project-buttons {
+                margin-top: 20px;
+            }
+
+            .button {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 15px 25px;
+                margin: 10px;
+                background: linear-gradient(135deg, #e31b23, #c0392b); /* Red gradient for buttons */
+                color: white;
+                border: none;
+                text-decoration: none;
+                border-radius: 8px;
+                transition: background-color 0.3s, color 0.3s, transform 0.3s;
+                cursor: pointer;
+                font-weight: bold;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            }
+
+            .button:hover {
+                transform: translateY(-3px);
+                background: linear-gradient(135deg, #c0392b, #e31b23); /* Reverse red gradient for hover effect */
+                color: #d0d0d0; /* Light gray text on hover */
+            }
+
+            .project-icon {
+                font-size: 3em;
+                color: #e31b23; /* Red for icon */
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                transition: color 0.3s, transform 0.3s;
+            }
+
+            .project-card:hover .project-icon {
+                color: #ffffff;
+                transform: rotate(20deg);
+            }
+
+            @media (max-width: 768px) {
+                .project-card {
+                    padding: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navigation Links -->
+        <header id="header">
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>            
+        </header>
+
+        <div class="container">
+            <!-- Projects Section -->
+            <section id="projects">
+                <h1 style="color: #e31b23;">Personal Projects</h1> <!-- Red for main title -->
+                <p style="color: #d0d0d0;">Here are some of the projects that I have worked on, showcasing my skills in AI development, game creation, and creative problem-solving.</p>
+
+                <!-- InterviewGPT Project -->
+                <div class="project-card">
+                    <h3>InterviewGPT</h3>
+                    <i class="fas fa-robot project-icon"></i> <!-- Project icon -->
+                    <p>An AI-powered platform built with Next.js, OpenAI GPT-4, and PDF.js to parse resumes and generate personalized interview questions. The tool provides real-time feedback with ScrapingAnt API, tailored for technical, behavioral, and coding interviews, improving the interview preparation experience.</p>
+                    <ul>
+                        <li>Developed with: Next.js, OpenAI GPT-4, PDF.js, ScrapingAnt API</li>
+                        <li>Key Features: Personalized interview questions, real-time feedback, scalable deployment</li>
+                    </ul>
+                    <div class="project-buttons">
+                        <a href="https://interviewgpt-dk.vercel.app" target="_blank" class="button">Visit Website</a>
+                        <a href="https://github.com/devansha5/InterviewGPT" target="_blank" class="button">View Code</a>
+                    </div>
+                </div>
+
+                <!-- Wordle Clone Project -->
+                <div class="project-card">
+                    <h3>Wordle Clone</h3>
+                    <i class="fas fa-gamepad project-icon"></i> <!-- Project icon -->
+                    <p>A Wordle-inspired game developed using Swift, Xcode, and UIKit, featuring a dynamic game board with keyboard functionality. The game includes a color-coded feedback system that visually indicates correct letters in real-time, making the experience intuitive and engaging.</p>
+                    <ul>
+                        <li>Developed with: Swift, Xcode, UIKit</li>
+                        <li>Key Features: Interactive game board, color-coded feedback, optimized gameplay</li>
+                    </ul>
+                    <div class="project-buttons">
+                        <a href="https://github.com/devansha5/Wordle" target="_blank" class="button">View Code</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Include FontAwesome for Icons -->
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    </body>
+</html>

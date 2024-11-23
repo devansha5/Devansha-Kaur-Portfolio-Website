@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Me - Devansha Kaur</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <style>
+            body {
+                font-family: 'Open Sans', sans-serif;
+                color: #ffffff;
+                background-color: #1a1a1a;
+            }
+
+            h1, h2, h3 {
+                font-family: 'Playfair Display', serif;
+                color: #e31b23;
+            }
+
+            .container {
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 60px 20px;
+                text-align: center;
+            }
+
+            /* About Me Section */
+            #about-intro {
+                background: linear-gradient(135deg, #141e30, #243b55);
+                padding: 80px 20px;
+                border-radius: 12px;
+                margin-bottom: 40px;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.6);
+            }
+
+            #about-intro p {
+                max-width: 800px;
+                margin: 20px auto;
+                font-size: 1.2em;
+                line-height: 1.8em;
+                color: #cccccc;
+            }
+
+            .about-icon {
+                font-size: 8em;
+                color: #e31b23;
+                margin-bottom: 20px;
+                animation: pulse 2s infinite;
+            }
+
+            @keyframes pulse {
+                0%, 100% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.1);
+                }
+            }
+
+            /* Interests Section */
+            #interests {
+                margin: 50px 0;
+                position: relative;
+            }
+
+            .interest-container {
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: hidden;
+                padding: 20px;
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .interest-card {
+                background: linear-gradient(135deg, #222, #333);
+                padding: 20px;
+                border-radius: 8px;
+                margin: 20px;
+                text-align: center;
+                color: white;
+                flex: 0 0 auto;
+                width: 220px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+                transition: transform 0.3s, box-shadow 0.3s;
+            }
+
+            .interest-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+            }
+
+            .interest-card i {
+                font-size: 3em;
+                margin-bottom: 15px;
+                color: #e31b23;
+            }
+
+            .interest-card h3 {
+                margin-top: 10px;
+                font-size: 1.5em;
+            }
+
+            /* Navigation Arrows */
+            .arrow {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: #444;
+                color: white;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                font-size: 1.5em;
+                border-radius: 50%;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                opacity: 0.8;
+                transition: opacity 0.3s ease;
+                z-index: 1000;
+            }
+
+            .arrow:hover {
+                opacity: 1;
+            }
+
+            .arrow-left {
+                left: -20px; /* Adjusted position further left */
+            }
+
+            .arrow-right {
+                right: -20px; /* Adjusted position further right */
+            }
+
+            @media (max-width: 768px) {
+                .arrow-left {
+                    left: -10px; /* Smaller adjustment for mobile */
+                }
+
+                .arrow-right {
+                    right: -10px; /* Smaller adjustment for mobile */
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navigation Links -->
+        <header id="header">
+            <h1 id="logo"><a href="index.html">Devansha Kaur</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>            
+        </header>
+
+        <div class="container">
+
+            <!-- Introduction Section -->
+            <section id="about-intro">
+                <h1>About Me</h1>
+                <i class="fas fa-user-circle about-icon"></i>
+                <p>
+                    Hello! I'm Devansha Kaur, a sophomore at Rutgers University majoring in Computer Science with a minor in Biological Sciences. I love taking on new challenges, whether it's solving complex coding problems or leading a team project. My passion for problem-solving fuels my drive to build innovative and effective solutions. I'm a creative thinker with an eye for design, and I enjoy crafting intuitive user experiences that balance aesthetics and functionality.
+                </p>
+                <p>
+                    I'm also known for my strong work ethic and adaptability—traits that help me thrive both in independent projects and collaborative environments. Whether I'm managing a project, working through technical challenges, or exploring new creative concepts, I bring enthusiasm and determination to every task. My goal is to leverage my skills to make a meaningful impact, combining creativity, leadership, and technical expertise to create work that truly matters.
+                </p>
+            </section>
+
+            <!-- Interests Section -->
+            <section id="interests">
+                <h2>What Inspires Me</h2>
+                <p>These are the passions that fuel my creativity and keep me motivated every day.</p>
+                <button class="arrow arrow-left" onclick="scrollInterests(-1)">&#8249;</button>
+                <div class="interest-container" id="interest-container">
+                    <div class="interest-card">
+                        <i class="fa fa-laptop-code"></i>
+                        <h3>Coding & Technology</h3>
+                        <p>I'm a tech enthusiast at heart—constantly experimenting with new languages and tools to push the boundaries of what's possible.</p>
+                    </div>
+                    <div class="interest-card">
+                        <i class="fa fa-music"></i>
+                        <h3>Dancing</h3>
+                        <p>Dance is my favorite creative outlet! I enjoy Bollywood and Classical dance styles as they bring joy and help me stay active.</p>
+                    </div>
+                    <div class="interest-card">
+                        <i class="fa fa-paint-brush"></i>
+                        <h3>Design & Creativity</h3>
+                        <p>From Figma to Adobe Illustrator, designing interfaces and creating visually appealing experiences is something I love doing.</p>
+                    </div>
+                    <div class="interest-card">
+                        <i class="fa fa-plane"></i>
+                        <h3>Travel & Adventure</h3>
+                        <p>I love traveling to new places, experiencing different cultures, and exploring hiking trails to reconnect with nature.</p>
+                    </div>
+                    <div class="interest-card">
+                        <i class="fa fa-child"></i>
+                        <h3>Community & Volunteering</h3>
+                        <p>I find fulfillment in giving back to my community, whether through local events or charity initiatives.</p>
+                    </div>
+                    <div class="interest-card">
+                        <i class="fa fa-utensils"></i>
+                        <h3>Cooking</h3>
+                        <p>Exploring different cuisines and experimenting in the kitchen is how I unwind. I find cooking therapeutic and a great way to bond with family and friends.</p>
+                    </div>
+                </div>
+                <button class="arrow arrow-right" onclick="scrollInterests(1)">&#8250;</button>
+            </section>
+
+        </div>
+
+        <!-- Include FontAwesome for Icons -->
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+        <script>
+            function scrollInterests(direction) {
+                const container = document.getElementById('interest-container');
+                const scrollAmount = 300; // Adjust the scroll distance as needed
+                container.scrollBy({
+                    top: 0,
+                    left: scrollAmount * direction,
+                    behavior: 'smooth'
+                });
+            }
+        </script>
+    </body>
+</html>

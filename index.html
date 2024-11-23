@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Devansha Kaur - Portfolio</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <style>
+            /* General Styling */
+            body {
+                font-family: 'Open Sans', sans-serif;
+                color: white;
+                background-color: #1a1a1a;
+            }
+
+            h1, h2, h3 {
+                font-family: 'Playfair Display', serif;
+                color: #e31b23;
+            }
+
+            /* Hero Banner Styling */
+            #banner {
+                position: relative;
+                background: url('assets/images/banner.jpg') no-repeat center center; /* Set banner.jpg as background */
+                background-size: cover; /* Ensure the background image fully covers the banner */
+                padding: 150px 20px; /* Increase padding for a taller banner */
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh; /* Full viewport height */
+                overflow: hidden;
+            }
+
+            .banner-title {
+                font-size: 6em;
+                margin: 0;
+                color: #e31b23;
+                text-align: center;
+            }
+
+            .arrow {
+                margin-top: 20px; /* Space between title and arrow */
+                font-size: 2.5em;
+                color: white;
+                animation: bounce 1.5s infinite;
+                cursor: pointer;
+                text-align: center;
+                display: flex;
+                justify-content: center; /* Center the arrow horizontally */
+                border: none; /* Ensure no border is applied to the arrow */
+                outline: none;
+                background: none;
+            }
+
+            @keyframes bounce {
+                0%, 100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(10px);
+                }
+            }
+
+            /* About Me Section */
+            #about-me-section {
+                background: linear-gradient(135deg, #222, #333);
+                padding: 80px 20px;
+                text-align: center;
+                color: white;
+            }
+
+            .about-container {
+                max-width: 800px;
+                margin: 0 auto;
+                background-color: #222;
+                border-radius: 10px;
+                padding: 30px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            }
+
+            .about-container h3 {
+                color: #e31b23;
+                margin-bottom: 20px;
+            }
+
+            .about-container p {
+                color: #cccccc;
+                line-height: 1.6em;
+                margin-bottom: 40px;
+            }
+
+            .about-icon {
+                font-size: 4em;
+                color: #e31b23;
+                transition: transform 0.3s, color 0.3s;
+                margin-bottom: 30px;
+                cursor: pointer;
+            }
+
+            .about-icon:hover {
+                color: #ffffff;
+                transform: scale(1.2);
+            }
+
+            /* Projects Section */
+            #projects {
+                background: linear-gradient(135deg, #222, #333);
+                padding: 80px 20px;
+                text-align: center;
+                color: white;
+            }
+
+            .projects-container {
+                max-width: 800px;
+                margin: 0 auto;
+                background-color: #222;
+                border-radius: 10px;
+                padding: 30px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            }
+
+            .projects-container h3 {
+                color: #e31b23;
+                margin-bottom: 20px;
+            }
+
+            .projects-container p {
+                color: #cccccc;
+                line-height: 1.6em;
+                margin-bottom: 40px;
+            }
+
+            .projects-icon {
+                font-size: 4em;
+                color: #e31b23;
+                transition: transform 0.3s, color 0.3s;
+                margin-bottom: 30px;
+                cursor: pointer;
+            }
+
+            .projects-icon:hover {
+                color: #ffffff;
+                transform: scale(1.2);
+            }
+
+            /* Skills Section */
+            #skills {
+                background-color: #1a1a1a;
+                padding: 80px 20px;
+                text-align: center;
+            }
+
+            .skills-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: center;
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+
+            .skill-card {
+                background-color: #333;
+                border-radius: 10px;
+                padding: 20px;
+                width: calc(33% - 40px);
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+                text-align: center;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .skill-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+            }
+
+            .skill-icon {
+                font-size: 2.5em;
+                color: #e31b23;
+                margin-bottom: 15px;
+            }
+
+            .skill-card h3 {
+                font-size: 1.5em;
+                color: white;
+                margin-bottom: 10px;
+            }
+
+            .skill-card p {
+                color: #cccccc;
+                font-size: 1em;
+            }
+        </style>
+    </head>
+    <body class="is-preload landing">
+        <div id="page-wrapper">
+
+            <!-- Header -->
+            <header id="header">
+                <h1 id="logo"><a href="index.html">Devansha Kaur</a></h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="experience.html">Experience</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Hero Banner Section -->
+            <section id="banner">
+                <div class="content">
+                    <header>
+                        <h1 class="banner-title">DEVANSHA KAUR</h1>
+                        <a href="#about-me-section" class="arrow">
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </header>
+                </div>
+            </section>
+
+            <!-- About Me Section -->
+            <section id="about-me-section" class="wrapper style2 special">
+                <div class="container">
+                    <div class="about-container">
+                        <div>
+                            <a href="about.html">
+                                <i class="fas fa-user about-icon"></i>
+                            </a>
+                        </div>
+                        <h3>About Me</h3>
+                        <p>
+                            Sophomore in Computer Science passionate about turning ideas into impactful solutions. I blend creativity with technical expertise to craft digital experiences that make a difference.
+                        </p>
+                        <ul class="actions special">
+                            <li><a href="about.html" class="button large">Learn More About Me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="wrapper style2 special">
+                <div class="container">
+                    <div class="projects-container">
+                        <h3>Discover My Projects</h3>
+                        <p>
+                            Dive into my journey of developing impactful solutions—whether it’s building AI-driven platforms or interactive applications. See how creativity and technology come together.
+                        </p>
+                        <div>
+                            <a href="projects.html">
+                                <i class="fas fa-rocket projects-icon"></i>
+                            </a>
+                        </div>
+                        <ul class="actions special">
+                            <li><a href="projects.html" class="button large">View All Projects</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="wrapper style1 special">
+                <div class="container">
+                    <header class="major">
+                        <h2>Technical Skills</h2>
+                        <p>Here are the tools and technologies that I leverage to build impactful software solutions.</p>
+                    </header>
+                    <div class="skills-container">
+                        <div class="skill-card">
+                            <div class="skill-icon"><i class="fas fa-code"></i></div>
+                            <h3>Programming Languages</h3>
+                            <p>Java, JavaScript, HTML/CSS, Python, SQL, Swift</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+                            <h3>Frameworks</h3>
+                            <p>React, Flask, Node.js, REST APIs, AngularJS, SwiftUI, Express.js, Bootstrap, Django</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                            <h3>Tools</h3>
+                            <p>VS Code, Xcode, Jupyter Notebooks, Git, GitHub, MySQL, MongoDB, Microsoft Excel, Sketch, Canva, Adobe Photoshop/Illustrator, Figma</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <ul class="icons">
+                    <li><a href="https://www.linkedin.com/in/devanshakaur" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="https://github.com/devansha5" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                    <li><a href="mailto:devanshakaur1@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+                </ul>
+                <ul class="copyright">
+                    <li>&copy; Devansha Kaur. All rights reserved.</li>
+                </ul>
+            </footer>
+
+        </div>
+    </body>
+</html>
