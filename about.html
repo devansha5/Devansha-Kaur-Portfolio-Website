@@ -22,6 +22,10 @@
                 color: #e31b23;
             }
 
+            h1 {
+                font-size: 2.8em;
+            }
+
             .container {
                 max-width: 1000px;
                 margin: 0 auto;
@@ -45,25 +49,19 @@
             #about-intro p {
                 max-width: 800px;
                 margin: 20px auto;
-                font-size: 1.2em;
+                font-size: 1.3em;
                 line-height: 1.8em;
                 color: #cccccc;
             }
 
-            .about-icon {
-                font-size: 8em;
-                color: #e31b23;
+            .about-photo {
+                display: block;
+                margin: 0 auto;
+                border-radius: 50%;
+                width: 300px;
+                height: 300px;
+                object-fit: cover;
                 margin-bottom: 20px;
-                animation: pulse 2s infinite;
-            }
-
-            @keyframes pulse {
-                0%, 100% {
-                    transform: scale(1);
-                }
-                50% {
-                    transform: scale(1.1);
-                }
             }
 
             /* Interests Section */
@@ -75,9 +73,10 @@
             .interest-container {
                 display: flex;
                 flex-wrap: nowrap;
-                overflow-x: hidden;
+                overflow-x: auto;
                 padding: 20px;
-                transition: transform 0.3s ease-in-out;
+                scroll-behavior: smooth;
+                justify-content: center;
             }
 
             .interest-card {
@@ -132,21 +131,91 @@
             }
 
             .arrow-left {
-                left: -20px; /* Adjusted position further left */
+                left: -10px;
             }
 
             .arrow-right {
-                right: -20px; /* Adjusted position further right */
+                right: -10px;
             }
 
+            /* Mobile Styles */
             @media (max-width: 768px) {
-                .arrow-left {
-                    left: -10px; /* Smaller adjustment for mobile */
+                #about-intro {
+                    padding: 60px 15px;
                 }
 
-                .arrow-right {
-                    right: -10px; /* Smaller adjustment for mobile */
+                #about-intro p {
+                    font-size: 1em;
                 }
+
+                .interest-container {
+                    padding: 10px;
+                    justify-content: center;
+                }
+
+                .interest-card {
+                    width: 180px;
+                    padding: 15px;
+                }
+
+                .arrow {
+                    font-size: 1.2em;
+                    padding: 8px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                #about-intro {
+                    padding: 40px 10px;
+                }
+
+                #about-intro p {
+                    font-size: 0.9em;
+                }
+
+                .interest-card {
+                    width: 150px;
+                    padding: 10px;
+                }
+
+                .arrow {
+                    font-size: 1em;
+                    padding: 6px;
+                }
+            }
+
+            /* Footer Styles */
+            footer {
+                background-color: #141e30;
+                color: #ffffff;
+                text-align: center;
+                padding: 40px 20px;
+                margin-top: 40px;
+                font-size: 0.9em;
+            }
+
+            .footer-icons {
+                margin-bottom: 15px;
+            }
+
+            .footer-icons a {
+                color: #ffffff;
+                font-size: 1.5em;
+                margin: 0 10px;
+                transition: color 0.3s ease;
+            }
+
+            .footer-icons a:hover {
+                color: #e31b23;
+            }
+
+            footer a {
+                color: #e31b23;
+                text-decoration: none;
+            }
+
+            footer a:hover {
+                text-decoration: underline;
             }
         </style>
     </head>
@@ -210,29 +279,43 @@
                         <p>I find fulfillment in giving back to my community, whether through local events or charity initiatives.</p>
                     </div>
                     <div class="interest-card">
-                        <i class="fa fa-utensils"></i>
-                        <h3>Cooking</h3>
-                        <p>Exploring different cuisines and experimenting in the kitchen is how I unwind. I find cooking therapeutic and a great way to bond with family and friends.</p>
+                        <i class="fa fa-utensils"></
+                            ></i>
+                            <h3>Cooking</h3>
+                            <p>Exploring different cuisines and experimenting in the kitchen is how I unwind. I find cooking therapeutic and a great way to bond with family and friends.</p>
+                        </div>
                     </div>
+                    <button class="arrow arrow-right" onclick="scrollInterests(1)">&#8250;</button>
+                </section>
+    
+            </div>
+    
+            <!-- Footer -->
+            <footer>
+                <div class="footer-icons">
+                    <a href="https://www.linkedin.com/in/devanshakaur" target="_blank" class="footer-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/devansha5" target="_blank" class="footer-icon"><i class="fab fa-github"></i></a>
+                    <a href="mailto:devanshakaur1@gmail.com" class="footer-icon"><i class="fas fa-envelope"></i></a>
                 </div>
-                <button class="arrow arrow-right" onclick="scrollInterests(1)">&#8250;</button>
-            </section>
-
-        </div>
-
-        <!-- Include FontAwesome for Icons -->
-        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-        <script>
-            function scrollInterests(direction) {
-                const container = document.getElementById('interest-container');
-                const scrollAmount = 300; // Adjust the scroll distance as needed
-                container.scrollBy({
-                    top: 0,
-                    left: scrollAmount * direction,
-                    behavior: 'smooth'
-                });
-            }
-        </script>
-    </body>
-</html>
+                <ul class="copyright">
+                    <li>&copy; Devansha Kaur 2024</li>
+                </ul>
+            </footer>
+    
+            <!-- Include FontAwesome for Icons -->
+            <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+            <script>
+                function scrollInterests(direction) {
+                    const container = document.getElementById('interest-container');
+                    const scrollAmount = 300; // Adjust the scroll distance as needed
+                    container.scrollBy({
+                        top: 0,
+                        left: scrollAmount * direction,
+                        behavior: 'smooth'
+                    });
+                }
+            </script>
+        </body>
+    </html>
+    
