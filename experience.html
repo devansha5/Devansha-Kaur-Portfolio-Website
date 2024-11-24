@@ -326,6 +326,15 @@
                 const navLinks = document.querySelector('.nav-links');
                 navLinks.classList.toggle('active');
             });
+
+            // Close menu when clicking outside of it
+            document.addEventListener('click', function(event) {
+                const navToggle = document.getElementById('navToggle');
+                const navLinks = document.querySelector('.nav-links');
+                if (!navToggle.contains(event.target) && !navLinks.contains(event.target)) {
+                    navLinks.classList.remove('active');
+                }
+            });
         </script>
     </body>
 </html>
