@@ -12,118 +12,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <style>
-            body {
-                font-family: 'Open Sans', sans-serif;
-                color: #ffffff;
-                background-color: #1a1a1a;
-            }
-
-            h1, h2, h3 {
-                font-family: 'Playfair Display', serif;
-                color: #e31b23;
-            }
-
-            .container {
-                max-width: 1000px;
-                margin: 0 auto;
-                padding: 60px 20px;
-            }
-
-            /* Intro Section */
-            #intro {
-                text-align: center;
-                padding: 50px 20px;
-                background: linear-gradient(135deg, #141e30, #243b55);
-                color: white;
-                border-radius: 10px;
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-                margin-bottom: 40px;
-            }
-
-            #intro h1 {
-                font-size: 3.5em;
-                margin-bottom: 15px;
-            }
-
-            #intro p {
-                font-size: 1.3em;
-                max-width: 800px;
-                margin: 0 auto;
-                line-height: 1.6;
-                font-weight: 300;
-                color: #cccccc;
-            }
-
-            /* Section Headings */
-            .section-heading {
-                margin: 50px 0 20px;
-                text-align: center;
-                color: #e31b23;
-                font-size: 2.5em;
-                font-weight: 700;
-                border-bottom: 2px solid #e31b23;
-                display: inline-block;
-                padding-bottom: 10px;
-            }
-
-            /* Timeline Section */
-            #experience {
-                margin: 50px 0;
-            }
-
-            .timeline {
-                position: relative;
-                padding: 20px 0;
-            }
-
-            .timeline-item {
-                display: flex;
-                align-items: center;
-                margin-bottom: 40px;
-                position: relative;
-            }
-
-            .timeline-icon {
-                width: 50px;
-                height: 50px;
-                background-color: #e31b23;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: #fff;
-                font-size: 1.5em;
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-                flex-shrink: 0;
-            }
-
-            .timeline-content {
-                background-color: #2c3e50;
-                border-radius: 8px;
-                padding: 25px;
-                margin-left: 20px;
-                width: 100%;
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-                transition: transform 0.3s ease-in-out;
-                color: #f1f1f1;
-            }
-
-            .timeline-item:hover .timeline-content {
-                transform: translateY(-5px);
-            }
-
-            .timeline-content h3 {
-                margin-top: 0;
-                color: #e31b23;
-                font-weight: 600;
-            }
-
-            .timeline-content p {
-                color: #d0d0d0;
-                font-size: 1.1em;
-            }
-
-            /* Navigation Styling */
+            /* Adjusted styles for pop-up menu and button */
+        
             #header {
                 position: fixed;
                 width: 100%;
@@ -134,19 +24,19 @@
                 align-items: center;
                 justify-content: space-between;
                 background-color: #1a1a1a;
-                padding: 0 20px;
+                padding: 0 10px; /* Reduced padding */
                 z-index: 1000;
             }
-
+        
             #logo {
+                flex: 1; /* Ensures logo stays on its side */
                 color: #e31b23;
                 font-size: 1.5em;
                 font-weight: 700;
                 white-space: nowrap;
-                margin: 0 auto;
-                text-align: center;
+                text-align: left;
             }
-
+        
             .nav-toggle {
                 display: none;
                 background: none;
@@ -154,61 +44,63 @@
                 color: #e31b23;
                 font-size: 2em;
                 cursor: pointer;
+                margin-right: 10px;
             }
-
+        
+            .nav-toggle i {
+                color: black; /* Changed color to black */
+                background: #e31b23; /* Button background red */
+                border-radius: 5px;
+                padding: 5px;
+            }
+        
             .nav-links {
                 display: flex;
                 list-style: none;
                 margin: 0;
                 padding: 0;
             }
-
-            .nav-links li {
-                margin: 0 10px;
-            }
-
-            .nav-links a {
-                color: white;
-                text-decoration: none;
-                font-weight: 700;
-                transition: color 0.3s;
-            }
-
-            .nav-links a:hover {
-                color: #e31b23;
-            }
-
+        
             @media (max-width: 768px) {
                 .nav-toggle {
                     display: block;
                 }
-
+        
                 .nav-links {
                     display: none;
-                    position: fixed;
-                    top: 60px;
-                    left: 0;
-                    width: 100%;
+                    position: absolute;
+                    top: 60px; /* Matches header height */
+                    left: 10px; /* Adjusted to prevent alignment issues */
+                    width: 90%; /* Reduced width for better fit */
                     background-color: #1a1a1a;
                     flex-direction: column;
                     align-items: center;
                     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-                    transition: max-height 0.3s ease-in-out;
+                    border-radius: 10px; /* Adds rounded corners */
+                    transition: all 0.3s ease-in-out;
                 }
-
+        
                 .nav-links.active {
                     display: flex;
                 }
-
+        
                 .nav-links li {
-                    margin: 15px 0;
+                    margin: 10px 0;
                 }
-
-                #header {
-                    justify-content: space-between;
+        
+                .nav-links a {
+                    color: white;
+                    text-decoration: none;
+                    font-weight: 700;
+                    font-size: 1.2em; /* Slightly larger for readability */
+                }
+        
+                .nav-links a:hover {
+                    color: #e31b23;
                 }
             }
         </style>
+        
     </head>
     <body>
         <!-- Navigation Links -->
