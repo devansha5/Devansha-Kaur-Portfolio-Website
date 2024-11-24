@@ -23,7 +23,7 @@
             }
 
             h1 {
-                font-size: 2.8em;
+                font-size: 2.5em;
             }
 
             .container {
@@ -36,7 +36,7 @@
             /* About Me Section */
             #about-intro {
                 background: linear-gradient(135deg, #141e30, #243b55);
-                padding: 80px 20px;
+                padding: 100px 20px;
                 border-radius: 12px;
                 margin-bottom: 40px;
                 position: relative;
@@ -49,7 +49,7 @@
             #about-intro p {
                 max-width: 800px;
                 margin: 20px auto;
-                font-size: 1.3em;
+                font-size: 1.5em;
                 line-height: 1.8em;
                 color: #cccccc;
             }
@@ -58,8 +58,8 @@
                 display: block;
                 margin: 0 auto;
                 border-radius: 50%;
-                width: 300px;
-                height: 300px;
+                width: 350px;
+                height: 350px;
                 object-fit: cover;
                 margin-bottom: 20px;
             }
@@ -145,7 +145,7 @@
                 }
 
                 #about-intro p {
-                    font-size: 1em;
+                    font-size: 1.2em;
                 }
 
                 .interest-container {
@@ -170,7 +170,7 @@
                 }
 
                 #about-intro p {
-                    font-size: 0.9em;
+                    font-size: 1em;
                 }
 
                 .interest-card {
@@ -186,22 +186,24 @@
 
             /* Footer Styles */
             footer {
-                background-color: #141e30;
+                background-color: #000000;
                 color: #ffffff;
                 text-align: center;
-                padding: 40px 20px;
+                padding: 20px 0;
                 margin-top: 40px;
                 font-size: 0.9em;
             }
 
             .footer-icons {
-                margin-bottom: 15px;
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                margin-top: 15px;
             }
 
             .footer-icons a {
                 color: #ffffff;
-                font-size: 1.5em;
-                margin: 0 10px;
+                font-size: 2em;
                 transition: color 0.3s ease;
             }
 
@@ -209,13 +211,45 @@
                 color: #e31b23;
             }
 
-            footer a {
-                color: #e31b23;
-                text-decoration: none;
+            ul.copyright {
+                margin-top: 10px;
+                text-align: center;
+                color: white;
+                list-style-type: none;
+                padding: 0;
             }
 
-            footer a:hover {
-                text-decoration: underline;
+            /* Logo Styling */
+            #logo {
+                font-size: 1.0em;
+                font-weight: bold;
+                margin: 10px;
+            }
+
+            /* Mobile Navigation Styling */
+            #nav ul {
+                display: flex;
+                flex-direction: row;
+                gap: 15px;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            @media only screen and (max-width: 768px) {
+                #nav ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background-color: #1a1a1a;
+                    padding: 15px;
+                }
+                #nav ul li {
+                    margin-bottom: 10px;
+                }
+                #logo {
+                    font-size: 2.5em;
+                }
             }
         </style>
     </head>
@@ -251,7 +285,7 @@
             <section id="interests">
                 <h2>What Inspires Me</h2>
                 <p>These are the passions that fuel my creativity and keep me motivated every day.</p>
-                <button class="arrow arrow-left" onclick="scrollInterests(-1)">&#8249;</button>
+                <button class="arrow arrow-left" onclick="scrollInterests(-1)">‹</button>
                 <div class="interest-container" id="interest-container">
                     <div class="interest-card">
                         <i class="fa fa-laptop-code"></i>
@@ -279,43 +313,47 @@
                         <p>I find fulfillment in giving back to my community, whether through local events or charity initiatives.</p>
                     </div>
                     <div class="interest-card">
-                        <i class="fa fa-utensils"></
-                            ></i>
-                            <h3>Cooking</h3>
-                            <p>Exploring different cuisines and experimenting in the kitchen is how I unwind. I find cooking therapeutic and a great way to bond with family and friends.</p>
-                        </div>
+                        <i class="fa fa-utensils"></i>
+                        <h3>Cooking</h3>
+                        <p>Exploring different cuisines and experimenting in the kitchen is how I unwind. I find cooking therapeutic and a great way to bond with family and friends.</p>
                     </div>
-                    <button class="arrow arrow-right" onclick="scrollInterests(1)">&#8250;</button>
-                </section>
-    
-            </div>
-    
-            <!-- Footer -->
-            <footer>
-                <div class="footer-icons">
-                    <a href="https://www.linkedin.com/in/devanshakaur" target="_blank" class="footer-icon"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/devansha5" target="_blank" class="footer-icon"><i class="fab fa-github"></i></a>
-                    <a href="mailto:devanshakaur1@gmail.com" class="footer-icon"><i class="fas fa-envelope"></i></a>
                 </div>
-                <ul class="copyright">
-                    <li>&copy; Devansha Kaur 2024</li>
-                </ul>
-            </footer>
-    
-            <!-- Include FontAwesome for Icons -->
-            <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    
-            <script>
-                function scrollInterests(direction) {
-                    const container = document.getElementById('interest-container');
-                    const scrollAmount = 300; // Adjust the scroll distance as needed
-                    container.scrollBy({
-                        top: 0,
-                        left: scrollAmount * direction,
-                        behavior: 'smooth'
-                    });
-                }
-            </script>
-        </body>
-    </html>
-    
+                <button class="arrow arrow-right" onclick="scrollInterests(1)">›</button>
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer" style="background-color: #1a1a1a; padding: 20px 0; text-align: center;">
+            <div class="footer-icons" style="display: flex; justify-content: center; gap: 20px; margin-top: 15px;">
+                <a href="https://www.linkedin.com/in/devanshakaur" class="footer-icon">
+                    <i class="fab fa-linkedin-in" style="font-size: .8em; color: white;"></i>
+                </a>
+                <a href="https://github.com/devansha5" class="footer-icon">
+                    <i class="fab fa-github" style="font-size: .8em; color: white;"></i>
+                </a>
+                <a href="mailto:devanshakaur1@gmail.com" class="footer-icon">
+                    <i class="fas fa-envelope" style="font-size: .8em; color: white;"></i>
+                </a>
+            </div>
+            <ul class="copyright" style="margin-top: 10px; text-align: center; color: white;">
+                <li>&copy; Devansha Kaur 2024</li>
+            </ul>
+        </footer>
+
+        <!-- Include FontAwesome for Icons -->
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+        <script>
+            function scrollInterests(direction) {
+                const container = document.getElementById('interest-container');
+                const scrollAmount = 300; // Adjust the scroll distance as needed
+                container.scrollBy({
+                    top: 0,
+                    left: scrollAmount * direction,
+                    behavior: 'smooth'
+                });
+            }
+        </script>
+    </body>
+</html>

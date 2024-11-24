@@ -14,12 +14,12 @@
             body {
                 font-family: 'Open Sans', sans-serif;
                 color: white;
-                background-color: #1a1a1a; /* Black background */
+                background-color: #1a1a1a;
             }
 
             h1, h2, h3 {
                 font-family: 'Playfair Display', serif;
-                color: #e31b23; /* Consistent color scheme */
+                color: #e31b23;
             }
 
             .container {
@@ -35,7 +35,7 @@
             }
 
             .project-card {
-                background: linear-gradient(135deg, #222, #333); /* Dark gray gradient background */
+                background: linear-gradient(135deg, #222, #333);
                 padding: 30px;
                 border-radius: 12px;
                 margin: 20px;
@@ -54,12 +54,12 @@
             .project-card h3 {
                 font-size: 2em;
                 margin-bottom: 10px;
-                color: #e31b23; /* Consistent red for project titles */
+                color: #e31b23;
             }
 
             .project-card p {
                 line-height: 1.8em;
-                color: #d0d0d0; /* Light gray for better readability */
+                color: #d0d0d0;
             }
 
             .project-card ul {
@@ -69,7 +69,7 @@
 
             .project-card ul li {
                 margin: 10px 0;
-                color: #c0c0c0; /* Silver */
+                color: #c0c0c0;
             }
 
             .project-buttons {
@@ -82,7 +82,7 @@
                 justify-content: center;
                 padding: 15px 25px;
                 margin: 10px;
-                background: linear-gradient(135deg, #e31b23, #c0392b); /* Red gradient for buttons */
+                background: linear-gradient(135deg, #e31b23, #c0392b);
                 color: white;
                 border: none;
                 text-decoration: none;
@@ -95,13 +95,13 @@
 
             .button:hover {
                 transform: translateY(-3px);
-                background: linear-gradient(135deg, #c0392b, #e31b23); /* Reverse red gradient for hover effect */
-                color: #d0d0d0; /* Light gray text on hover */
+                background: linear-gradient(135deg, #c0392b, #e31b23);
+                color: #d0d0d0;
             }
 
             .project-icon {
                 font-size: 3em;
-                color: #e31b23; /* Red for icon */
+                color: #e31b23;
                 position: absolute;
                 top: 15px;
                 right: 15px;
@@ -116,6 +116,17 @@
             @media (max-width: 768px) {
                 .project-card {
                     padding: 20px;
+                }
+
+                /* Navigation */
+                #nav ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                #nav ul li {
+                    margin-bottom: 10px;
                 }
             }
         </style>
@@ -138,13 +149,13 @@
         <div class="container">
             <!-- Projects Section -->
             <section id="projects">
-                <h1 style="color: #e31b23;">Personal Projects</h1> <!-- Red for main title -->
+                <h1 style="color: #e31b23;">Personal Projects</h1>
                 <p style="color: #d0d0d0;">Here are some of the projects that I have worked on, showcasing my skills in AI development, game creation, and creative problem-solving.</p>
 
                 <!-- InterviewGPT Project -->
                 <div class="project-card">
                     <h3>InterviewGPT</h3>
-                    <i class="fas fa-robot project-icon"></i> <!-- Project icon -->
+                    <i class="fas fa-robot project-icon"></i>
                     <p>An AI-powered platform built with Next.js, OpenAI GPT-4, and PDF.js to parse resumes and generate personalized interview questions. The tool provides real-time feedback with ScrapingAnt API, tailored for technical, behavioral, and coding interviews, improving the interview preparation experience.</p>
                     <ul>
                         <li>Developed with: Next.js, OpenAI GPT-4, PDF.js, ScrapingAnt API</li>
@@ -159,7 +170,7 @@
                 <!-- Wordle Clone Project -->
                 <div class="project-card">
                     <h3>Wordle Clone</h3>
-                    <i class="fas fa-gamepad project-icon"></i> <!-- Project icon -->
+                    <i class="fas fa-gamepad project-icon"></i>
                     <p>A Wordle-inspired game developed using Swift, Xcode, and UIKit, featuring a dynamic game board with keyboard functionality. The game includes a color-coded feedback system that visually indicates correct letters in real-time, making the experience intuitive and engaging.</p>
                     <ul>
                         <li>Developed with: Swift, Xcode, UIKit</li>
@@ -171,6 +182,24 @@
                 </div>
             </section>
         </div>
+
+       <!-- Footer -->
+       <footer id="footer" style="background-color: #1a1a1a; padding: 20px 0; text-align: center;">
+        <div class="footer-icons" style="display: flex; justify-content: center; gap: 20px; margin-top: 15px;">
+            <a href="https://www.linkedin.com/in/devanshakaur" class="footer-icon">
+                <i class="fab fa-linkedin-in" style="font-size: 1.5em; color: white;"></i>
+            </a>
+            <a href="https://github.com/devansha5" class="footer-icon">
+                <i class="fab fa-github" style="font-size: 1.5em; color: white;"></i>
+            </a>
+            <a href="mailto:devanshakaur1@gmail.com" class="footer-icon">
+                <i class="fas fa-envelope" style="font-size: 1.5em; color: white;"></i>
+            </a>
+        </div>
+        <ul class="copyright" style="margin-top: 10px; text-align: center; color: white;">
+            <li>&copy; Devansha Kaur 2024</li>
+        </ul>
+    </footer>
 
         <!-- Include FontAwesome for Icons -->
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
