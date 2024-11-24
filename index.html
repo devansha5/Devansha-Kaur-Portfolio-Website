@@ -238,6 +238,58 @@
                 padding: 20px 0;
                 text-align: center;
             }
+
+            /* Mobile Styles */
+            @media only screen and (max-width: 768px) {
+                /* Hero Banner Styling */
+                #banner {
+                    padding: 60px 20px;
+                    height: auto;
+                    min-height: 100vh;
+                }
+
+                .banner-title {
+                    font-size: 3em; /* Adjusted for smaller screens */
+                }
+
+                .banner-blurb {
+                    font-size: 1.2em; /* Adjusted for readability */
+                }
+
+                /* About Me and Projects Section */
+                .about-container, .projects-container {
+                    padding: 20px;
+                    width: 90%;
+                    margin: 20px auto;
+                }
+
+                .skills-container {
+                    flex-direction: column;
+                }
+
+                .skill-card {
+                    width: calc(100% - 40px);
+                }
+
+                /* Navigation */
+                #nav ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                #nav ul li {
+                    margin-bottom: 10px;
+                }
+
+                .banner-icons a {
+                    font-size: 1.5em; /* Make icons smaller for mobile */
+                }
+
+                .arrow {
+                    font-size: 2em;
+                }
+            }
         </style>
     </head>
     <body class="is-preload landing">
