@@ -156,14 +156,25 @@
             }
 
             .nav-links {
+                display: none; /* Hidden by default */
+                position: fixed;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #1a1a1a;
+                flex-direction: column;
+                align-items: center;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+                transition: max-height 0.3s ease-in-out;
+                overflow: hidden; /* Prevent overflow when menu is hidden */
+            }
+
+            .nav-links.active {
                 display: flex;
-                list-style: none;
-                margin: 0;
-                padding: 0;
             }
 
             .nav-links li {
-                margin: 0 10px;
+                margin: 15px 0;
             }
 
             .nav-links a {
@@ -180,31 +191,6 @@
             @media (max-width: 768px) {
                 .nav-toggle {
                     display: block;
-                }
-
-                .nav-links {
-                    display: none;
-                    position: fixed;
-                    top: 60px;
-                    left: 0;
-                    width: 100%;
-                    background-color: #1a1a1a;
-                    flex-direction: column;
-                    align-items: center;
-                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-                    transition: max-height 0.3s ease-in-out;
-                }
-
-                .nav-links.active {
-                    display: flex;
-                }
-
-                .nav-links li {
-                    margin: 15px 0;
-                }
-
-                #header {
-                    justify-content: space-between;
                 }
             }
         </style>
@@ -256,43 +242,6 @@
                             <p>Jun 2024 - Sept 2024<br>• Built responsive user interfaces for training and enrollment pages using HTML, CSS, and JavaScript, increasing user engagement by 15%.<br>• Tested and debugged web applications across platforms using browser-based tools for cross-browser compatibility, improving performance.<br>• Organized dynamic, interactive content for Agile and Scrum training programs, creating cohesive, accessible, and well-structured materials.</p>
                         </div>
                     </div>
-                    <!-- Research Assistant -->
-                    <div class="timeline-item">
-                        <div class="timeline-icon">
-                            <i class="fas fa-flask"></i>
-                        </div>
-                        <div class="timeline-content">
-                            <h3>Research Assistant - JMB Educational Consulting, LLC</h3>
-                            <p>Jan 2022 - Jun 2023<br>• Researched and analyzed national education issues, producing detailed Chicago Style reports on policy impacts, emerging trends, and findings.<br>• Developed analytical skills to thoroughly assess and highlight the extensive and long-term impacts of the COVID-19 pandemic on education.<br>• Conducted research using Excel to analyze trends, providing valuable insights for discussions on educational policies, reforms, and practices.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Leadership & Volunteer Experience Section -->
-            <h2 class="section-heading">Leadership & Volunteer Experience</h2>
-            <section id="experience">
-                <div class="timeline">
-                    <!-- Design Committee Member -->
-                    <div class="timeline-item">
-                        <div class="timeline-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div class="timeline-content">
-                            <h3>Design Committee Member - Business Information Technology Society</h3>
-                            <p>Nov 2024 - Present<br>• Created professional flyers and promotional materials using Adobe Illustrator, Photoshop, and Figma to effectively support event promotions.<br>• Led collaboration with marketing and event teams to develop cohesive branding strategies, ensuring alignment with organizational objectives.<br>• Designed promotional materials for workshops and events, highlighting opportunities in business and technology to enhance visibility.</p>
-                        </div>
-                    </div>
-                    <!-- Marketing Committee Member -->
-                    <div class="timeline-item">
-                        <div class="timeline-icon">
-                            <i class="fas fa-bullhorn"></i>
-                        </div>
-                        <div class="timeline-content">
-                            <h3>Marketing Committee Member - Association of Punjabis at Rutgers University</h3>
-                            <p>Sept 2024 - Present<br>• Designed promotional flyers, digital graphics, and custom merchandise using Canva and Adobe Illustrator to enhance branding and outreach.<br>• Managed social media campaigns on Instagram and Facebook, using Instagram Creator Tools and CapCut to boost engagement by 30%.<br>• Executed marketing campaigns by integrating QR codes, interactive displays, and trend-based strategies to increase event attendance.</p>
-                        </div>
-                    </div>
                 </div>
             </section>
         </div>
@@ -318,13 +267,14 @@
         <!-- Include FontAwesome for Icons -->
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <script>
-            document.getElementById('navToggle').addEventListener('click', function() {
+            document.getElementById('navToggle').addEventListener('click', function (event) {
+                event.stopPropagation(); // Prevent the click event from propagating to the document
                 const navLinks = document.querySelector('.nav-links');
                 navLinks.classList.toggle('active');
             });
 
             // Close menu when clicking outside of it
-            document.addEventListener('click', function(event) {
+            document.addEventListener('click', function (event) {
                 const navToggle = document.getElementById('navToggle');
                 const navLinks = document.querySelector('.nav-links');
                 if (!navToggle.contains(event.target) && !navLinks.contains(event.target)) {
