@@ -5,19 +5,17 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/noscript.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <style>
-            /* General Styling */
             body {
                 font-family: 'Open Sans', sans-serif;
-                color: white;
+                color: #ffffff;
                 background-color: #1a1a1a;
-                margin: 0;
             }
 
             h1, h2, h3 {
@@ -31,100 +29,15 @@
                 padding: 60px 20px;
             }
 
-            /* Header Styling */
-            #header {
-                background: rgba(39, 40, 51, 0.965);
-                box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
-                cursor: default;
-                height: 3.5em;
-                left: 0;
-                line-height: 3.5em;
-                position: fixed;
-                top: 0;
-                width: 100%;
-                z-index: 100;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 0 1em;
-            }
-
-            #logo {
-                font-size: 1.5em;
-                color: #e31b23;
-                margin: 0 auto;
-                text-align: center;
-            }
-
-            .nav-toggle {
-                display: none;
-                background: none;
-                border: none;
-                color: white;
-                font-size: 1.5em;
-                cursor: pointer;
-                position: absolute;
-                left: 1em;
-            }
-
-            #navLinks {
-                display: flex;
-                list-style: none;
-                margin: 0;
-                padding: 0;
-            }
-
-            #navLinks li {
-                margin-left: 1em;
-            }
-
-            #navLinks li a {
-                text-decoration: none;
-                color: white;
-                font-weight: 700;
-                transition: color 0.3s;
-            }
-
-            #navLinks li a:hover {
-                color: #e31b23;
-            }
-
-            /* Responsive Header for Mobile */
-            @media (max-width: 768px) {
-                .nav-toggle {
-                    display: inline-block;
-                }
-
-                #navLinks {
-                    display: none;
-                    flex-direction: column;
-                    position: absolute;
-                    top: 3.5em;
-                    right: 1em;
-                    background: rgba(39, 40, 51, 0.965);
-                    box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
-                    padding: 1em;
-                    width: calc(100% - 2em);
-                }
-
-                #navLinks.active {
-                    display: flex;
-                }
-
-                #navLinks li {
-                    margin: 1em 0;
-                }
-            }
-
             /* Intro Section */
             #intro {
                 text-align: center;
                 padding: 50px 20px;
-                margin-top: 3.5em;
                 background: linear-gradient(135deg, #141e30, #243b55);
                 color: white;
                 border-radius: 10px;
                 box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+                margin-bottom: 40px;
             }
 
             #intro h1 {
@@ -191,7 +104,12 @@
                 margin-left: 20px;
                 width: 100%;
                 box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+                transition: transform 0.3s ease-in-out;
                 color: #f1f1f1;
+            }
+
+            .timeline-item:hover .timeline-content {
+                transform: translateY(-5px);
             }
 
             .timeline-content h3 {
@@ -204,17 +122,101 @@
                 color: #d0d0d0;
                 font-size: 1.1em;
             }
+
+            /* Navigation Styling */
+            #header {
+                position: fixed;
+                width: 100%;
+                top: 0;
+                left: 0;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: #1a1a1a;
+                padding: 0 20px;
+                z-index: 1000;
+            }
+
+            #logo {
+                color: #e31b23;
+                font-size: 1.5em;
+                font-weight: 700;
+                white-space: nowrap;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            .nav-toggle {
+                display: none;
+                background: none;
+                border: none;
+                color: #e31b23;
+                font-size: 2em;
+                cursor: pointer;
+            }
+
+            .nav-links {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .nav-links li {
+                margin: 0 10px;
+            }
+
+            .nav-links a {
+                color: white;
+                text-decoration: none;
+                font-weight: 700;
+                transition: color 0.3s;
+            }
+
+            .nav-links a:hover {
+                color: #e31b23;
+            }
+
+            @media (max-width: 768px) {
+                .nav-toggle {
+                    display: block;
+                }
+
+                .nav-links {
+                    display: none;
+                    position: fixed;
+                    top: 60px;
+                    left: 0;
+                    width: 100%;
+                    background-color: #1a1a1a;
+                    flex-direction: column;
+                    align-items: center;
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+                    transition: max-height 0.3s ease-in-out;
+                }
+
+                .nav-links.active {
+                    display: flex;
+                }
+
+                .nav-links li {
+                    margin: 15px 0;
+                }
+
+                #header {
+                    justify-content: space-between;
+                }
+            }
         </style>
     </head>
     <body>
-        <!-- Header -->
+        <!-- Navigation Links -->
         <header id="header">
-            <button id="navToggle" aria-label="Toggle Navigation">
-                <i class="fas fa-bars"></i>
-            </button>
+            <button id="navToggle" class="nav-toggle"><i class="fas fa-bars"></i></button>
             <h1 id="logo"><a href="index.html">Devansha Kaur</a></h1>
-            <nav>
-                <ul id="navLinks">
+            <nav id="nav">
+                <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Me</a></li>
                     <li><a href="projects.html">Projects</a></li>
@@ -224,56 +226,108 @@
             </nav>
         </header>
 
-        <!-- Intro Section -->
-        <div id="intro">
-            <h1>My Experience</h1>
-            <p>Throughout my journey, I've tackled various projects and leadership roles, showcasing my commitment, creativity, and drive for innovation.</p>
+        <div class="container">
+            <!-- Intro Section -->
+            <section id="intro">
+                <h1>My Experience</h1>
+                <p>Throughout my journey, I've tackled a variety of projects, from developing cutting-edge software solutions to leading community initiatives. Below, you'll find highlights of my work experience and leadership contributions that showcase my commitment, creativity, and drive for innovation.</p>
+            </section>
+
+            <!-- Work Experience Section -->
+            <h2 class="section-heading">Work Experience</h2>
+            <section id="experience">
+                <div class="timeline">
+                    <!-- UI/UX Design Fellow -->
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>UI/UX Design Fellow - Rutgers Blueprint</h3>
+                            <p>Sept 2024 – Present<br>• Designed high-fidelity prototypes in Figma and conducted usability testing, improving accessibility, and increasing user satisfaction by 20%.<br>• Developed a mobile app feature using Swift and Python, addressing complex user interaction challenges and delivering innovative solutions.<br>• Incorporated user feedback to refine designs, producing optimized, functional interfaces focused on seamless navigation and enhanced usability.</p>
+                        </div>
+                    </div>
+                    <!-- Web Development Intern -->
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Web Development Intern - Journey2Agility, LLC</h3>
+                            <p>Jun 2024 - Sept 2024<br>• Built responsive user interfaces for training and enrollment pages using HTML, CSS, and JavaScript, increasing user engagement by 15%.<br>• Tested and debugged web applications across platforms using browser-based tools for cross-browser compatibility, improving performance.<br>• Organized dynamic, interactive content for Agile and Scrum training programs, creating cohesive, accessible, and well-structured materials.</p>
+                        </div>
+                    </div>
+                    <!-- Research Assistant -->
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Research Assistant - JMB Educational Consulting, LLC</h3>
+                            <p>Jan 2022 - Jun 2023<br>• Researched and analyzed national education issues, producing detailed Chicago Style reports on policy impacts, emerging trends, and findings.<br>• Developed analytical skills to thoroughly assess and highlight the extensive and long-term impacts of the COVID-19 pandemic on education.<br>• Conducted research using Excel to analyze trends, providing valuable insights for discussions on educational policies, reforms, and practices.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Leadership & Volunteer Experience Section -->
+            <h2 class="section-heading">Leadership & Volunteer Experience</h2>
+            <section id="experience">
+                <div class="timeline">
+                    <!-- Design Committee Member -->
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Design Committee Member - Business Information Technology Society</h3>
+                            <p>Nov 2024 - Present<br>• Created professional flyers and promotional materials using Adobe Illustrator, Photoshop, and Figma to effectively support event promotions.<br>• Led collaboration with marketing and event teams to develop cohesive branding strategies, ensuring alignment with organizational objectives.<br>• Designed promotional materials for workshops and events, highlighting opportunities in business and technology to enhance visibility.</p>
+                        </div>
+                    </div>
+                    <!-- Marketing Committee Member -->
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Marketing Committee Member - Association of Punjabis at Rutgers University</h3>
+                            <p>Sept 2024 - Present<br>• Designed promotional flyers, digital graphics, and custom merchandise using Canva and Adobe Illustrator to enhance branding and outreach.<br>• Managed social media campaigns on Instagram and Facebook, using Instagram Creator Tools and CapCut to boost engagement by 30%.<br>• Executed marketing campaigns by integrating QR codes, interactive displays, and trend-based strategies to increase event attendance.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-
-        <!-- Work Experience Section -->
-        <h2 class="section-heading">Work Experience</h2>
-        <section id="experience">
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-icon"><i class="fas fa-laptop-code"></i></div>
-                    <div class="timeline-content">
-                        <h3>UI/UX Design Fellow - Rutgers Blueprint</h3>
-                        <p>Sept 2024 – Present<br>• Designed high-fidelity prototypes in Figma, improving accessibility by 20%.<br>• Developed mobile app features using Swift and Python.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Volunteer Experience Section -->
-        <h2 class="section-heading">Volunteer Experience</h2>
-        <section id="experience">
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-icon"><i class="fas fa-hand-holding-heart"></i></div>
-                    <div class="timeline-content">
-                        <h3>Guru Nanak Sikh Heritage Temple - Monroe Township, NJ</h3>
-                        <p>Teacher & Lead Volunteer<br>September 2021 - August 2023<br>• Taught children (ages 6-7) Punjabi alphabet and language skills.<br>• Educated students on Sikh history, fostering cultural appreciation.<br>• Volunteered in the community kitchen, assisting families and managing cleanliness.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Footer -->
         <footer id="footer" style="background-color: #1a1a1a; padding: 20px 0; text-align: center;">
-            <div class="footer-icons">
-                <a href="https://www.linkedin.com/in/devanshakaur"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/devansha5"><i class="fab fa-github"></i></a>
-                <a href="mailto:devanshakaur1@gmail.com"><i class="fas fa-envelope"></i></a>
+            <div class="footer-icons" style="display: flex; justify-content: center; gap: 20px; margin-top: 15px;">
+                <a href="https://www.linkedin.com/in/devanshakaur" class="footer-icon">
+                    <i class="fab fa-linkedin-in" style="font-size: 1.5em; color: white;"></i>
+                </a>
+                <a href="https://github.com/devansha5" class="footer-icon">
+                    <i class="fab fa-github" style="font-size: 1.5em; color: white;"></i>
+                </a>
+                <a href="mailto:devanshakaur1@gmail.com" class="footer-icon">
+                    <i class="fas fa-envelope" style="font-size: 1.5em; color: white;"></i>
+                </a>
             </div>
+            <ul class="copyright" style="margin-top: 10px; text-align: center; color: white;">
+                <li>&copy; Devansha Kaur 2024</li>
+            </ul>
         </footer>
 
-        <!-- JavaScript -->
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/jquery.dropotron.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
         <script>
-            const navToggle = document.getElementById('navToggle');
-            const navLinks = document.getElementById('navLinks');
-
-            navToggle.addEventListener('click', function () {
-                navLinks.classList.toggle('active');
+            document.getElementById('navToggle').addEventListener('click', function () {
+                document.querySelector('.nav-links').classList.toggle('active');
             });
         </script>
     </body>
