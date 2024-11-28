@@ -1,6 +1,6 @@
 # Devansha Kaur Portfolio Website
 
-Visit the site here: [https://devansha5.github.io/Devansha-Kaur-Portfolio-Website/index.html](https://devansha5.github.io/Devansha-Kaur-Portfolio-Website/index.html)
+Visit the site here: https://devansha5.github.io/Devansha-Kaur-Portfolio-Website/index.html
 
 Devansha Kaur's Portfolio Website showcases a blend of technical expertise and creative design. The website highlights my journey as a Computer Science student, my professional experiences, and the projects I’ve worked on. It's a space where you can explore my skills, accomplishments, and contributions in the tech industry.
 
