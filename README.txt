@@ -1,35 +1,54 @@
-Landed by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# Devansha Kaur Portfolio Website
 
+Visit the site here: [https://devansha5.github.io/Devansha-Kaur-Portfolio-Website/index.html](https://devansha5.github.io/Devansha-Kaur-Portfolio-Website/index.html)
 
-A dark, slick, modern, responsive, adjective-drenched design built around an extremely
-dynamic landing page (scroll that mofo!). Inspired by Big Picture, another design
-of mine with a similarish feel/flow, only this time I took it waaaaaay further and
-actually made it multipurpose (versus copping out and making it a one pager like I
-did last time ;) Includes multiple pages, a bunch of pre-styled elements, and all
-its Sass sources.
+Devansha Kaur's Portfolio Website showcases a blend of technical expertise and creative design. The website highlights my journey as a Computer Science student, my professional experiences, and the projects I’ve worked on. It's a space where you can explore my skills, accomplishments, and contributions in the tech industry.
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+This project uses web technologies: HTML, CSS, JavaScript, and modern front-end frameworks.
 
-(* = Not included)
+## Features
 
-Feedback, bug reports, and comments are not only welcome, but strongly encouraged :)
+🎨 **Personalized Design**: A clean, modern, and responsive design to present my work and skills effectively.
 
-AJ
-aj@lkn.io | @ajlkn
+📚 **Experience Section**: Detailed accounts of my work experience, including internships, roles, and projects.
 
+💼 **Projects Showcase**: A dedicated section to explore some of my most impactful projects and GitHub repositories.
 
-Credits:
+📧 **Contact Information**: Easy access to my contact details and social profiles.
 
-	Demo Images:
-		Unsplash (unsplash.com)
+## Getting Started
 
-	Icons:
-		Font Awesome (fontawesome.io)
+### Clone the Repository
+```bash
+git clone https://github.com/devansha5/Devansha-Kaur-Portfolio-Website.git
+cd Devansha-Kaur-Portfolio-Website
+Install Dependencies
+This website doesn't require server-side installation or setup. Just open the index.html file in your browser.
 
-	Other:
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+View the Website
+Open the website in your browser by navigating to index.html. You can view it live here: https://devansha5.github.io/Devansha-Kaur-Portfolio-Website/index.html.
+
+How It Works
+
+The portfolio website is a static HTML/CSS/JavaScript site, ensuring fast load times and accessibility.
+It includes a responsive layout to ensure the site looks great on both desktop and mobile devices.
+The site contains sections that outline my background, experience, and the projects I’ve worked on.
+Technologies Used
+
+HTML/CSS/JavaScript: Core technologies for building the layout and interactivity.
+Figma: Used for creating wireframes and UI/UX designs before development.
+FontAwesome: For adding icons to enhance the design and user experience.
+Author
+
+This portfolio website was built by Devansha Kaur to showcase my work and technical abilities. Feel free to connect with me:
+
+LinkedIn - Devansha Kaur
+GitHub - Devansha Kaur
+Email - devanshakaur1@gmail.com
+Contributions
+
+Contributions are welcome! If you'd like to improve the website, feel free to fork the repository, make your changes, and open a pull request. Let’s make it even better together!
+
+License
+
+This project is open source under the MIT License.
