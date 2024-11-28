@@ -1,4 +1,4 @@
-# Devansha Kaur Portfolio Website
+Devansha Kaur Portfolio Website
 
 Visit the site here: https://devansha5.github.io/Devansha-Kaur-Portfolio-Website/index.html
 
@@ -6,19 +6,19 @@ Devansha Kaur's Portfolio Website showcases a blend of technical expertise and c
 
 This project uses web technologies: HTML, CSS, JavaScript, and modern front-end frameworks.
 
-## Features
+Features:
 
-🎨 **Personalized Design**: A clean, modern, and responsive design to present my work and skills effectively.
+🎨 Personalized Design: A clean, modern, and responsive design to present my work and skills effectively.
 
-📚 **Experience Section**: Detailed accounts of my work experience, including internships, roles, and projects.
+📚 Experience Section**: Detailed accounts of my work experience, including internships, roles, and projects.
 
-💼 **Projects Showcase**: A dedicated section to explore some of my most impactful projects and GitHub repositories.
+💼 Projects Showcase: A dedicated section to explore some of my most impactful projects and GitHub repositories.
 
-📧 **Contact Information**: Easy access to my contact details and social profiles.
+📧 Contact Information: Easy access to my contact details and social profiles.
 
-## Getting Started
+Getting Started:
 
-### Clone the Repository
+ Clone the Repository
 ```bash
 git clone https://github.com/devansha5/Devansha-Kaur-Portfolio-Website.git
 cd Devansha-Kaur-Portfolio-Website
