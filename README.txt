@@ -42,8 +42,8 @@ Author
 
 This portfolio website was built by Devansha Kaur to showcase my work and technical abilities. Feel free to connect with me:
 
-LinkedIn - Devansha Kaur
-GitHub - Devansha Kaur
+LinkedIn - https://www.linkedin.com/in/devanshakaur/
+GitHub - https://github.com/devansha5
 Email - devanshakaur1@gmail.com
 Contributions
 
